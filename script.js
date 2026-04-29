@@ -1,7 +1,9 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
 const year = document.querySelector("#year");
-const revealTargets = document.querySelectorAll(".hero-copy, .hero-card, .project-card, .about-card, .about-points div, .contact-panel");
+const revealTargets = document.querySelectorAll(
+  ".hero-copy, .hero-card, .project-card, .about-card, .about-points div, .contact-panel, .case-study-hero, .case-study-summary div, .case-study-block"
+);
 
 if (year) {
   year.textContent = new Date().getFullYear();
