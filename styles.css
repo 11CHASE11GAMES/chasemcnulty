@@ -276,6 +276,9 @@ h3 {
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 1.6rem;
   transition:
     transform 220ms ease,
@@ -292,6 +295,7 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: fit-content;
   margin-top: 1rem;
   min-height: 2.75rem;
   padding: 0.75rem 1rem;
@@ -308,6 +312,70 @@ h3 {
 .project-card a:focus-visible {
   transform: translateY(-2px);
   box-shadow: 0 10px 22px rgba(31, 41, 51, 0.12);
+}
+
+.project-visual {
+  width: 100%;
+  min-height: 9rem;
+  margin-bottom: 1.4rem;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(92, 111, 123, 0.16), rgba(255, 255, 252, 0.92));
+  border: 1px solid rgba(31, 41, 51, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-visual span {
+  position: absolute;
+  display: block;
+  border-radius: 999px;
+  background: rgba(255, 255, 252, 0.88);
+  box-shadow: 0 10px 22px rgba(31, 41, 51, 0.08);
+}
+
+.project-visual-planner span:nth-child(1) {
+  width: 44%;
+  height: 0.75rem;
+  left: 1rem;
+  top: 1rem;
+}
+
+.project-visual-planner span:nth-child(2) {
+  width: 68%;
+  height: 2.5rem;
+  left: 1rem;
+  top: 2.4rem;
+  border-radius: 1rem;
+}
+
+.project-visual-planner span:nth-child(3) {
+  width: 3.75rem;
+  height: 3.75rem;
+  right: 1rem;
+  bottom: 1rem;
+  border-radius: 50%;
+}
+
+.project-visual-dining span:nth-child(1) {
+  width: 35%;
+  height: 0.75rem;
+  left: 1rem;
+  top: 1rem;
+}
+
+.project-visual-dining span:nth-child(2) {
+  width: 76%;
+  height: 1.1rem;
+  left: 1rem;
+  top: 3rem;
+}
+
+.project-visual-dining span:nth-child(3) {
+  width: 58%;
+  height: 2rem;
+  left: 1rem;
+  bottom: 1rem;
+  border-radius: 999px;
 }
 
 .split-section .about-layout {
@@ -360,6 +428,96 @@ h3 {
     linear-gradient(120deg, rgba(92, 111, 123, 0.05), transparent 62%);
   border: 1px solid rgba(31, 41, 51, 0.08);
   box-shadow: var(--shadow);
+}
+
+.case-study-hero h1 {
+  max-width: 22ch;
+}
+
+.case-study-visual {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: center;
+  padding: 2.5rem 0;
+}
+
+.mock-phone {
+  width: min(100%, 19rem);
+  min-height: 26rem;
+  justify-self: center;
+  padding: 1.35rem;
+  border-radius: 2rem;
+  background: #18212b;
+  box-shadow: 0 24px 48px rgba(31, 41, 51, 0.16);
+}
+
+.mock-status,
+.mock-title,
+.mock-task,
+.mock-menu-row,
+.mock-order-button,
+.mock-pet {
+  background: rgba(255, 255, 252, 0.92);
+}
+
+.mock-status {
+  width: 34%;
+  height: 0.45rem;
+  margin: 0 auto 1.6rem;
+  border-radius: 999px;
+  opacity: 0.7;
+}
+
+.mock-title {
+  width: 64%;
+  height: 1rem;
+  margin-bottom: 1.4rem;
+  border-radius: 999px;
+}
+
+.mock-task,
+.mock-menu-row {
+  height: 3.1rem;
+  margin-bottom: 0.85rem;
+  border-radius: 1rem;
+}
+
+.mock-task.short {
+  width: 72%;
+}
+
+.mock-pet {
+  width: 6.25rem;
+  height: 6.25rem;
+  margin: 2rem auto 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 36%, #fffefb 0 18%, transparent 19%),
+    linear-gradient(135deg, var(--accent), var(--accent-deep));
+}
+
+.mock-menu-row {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 252, 0.95) 0 24%, rgba(255, 255, 252, 0.72) 24% 100%);
+}
+
+.mock-order-button {
+  height: 3rem;
+  margin-top: 2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+}
+
+.visual-copy h2 {
+  max-width: 18ch;
+  margin-bottom: 1rem;
+}
+
+.visual-copy p {
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 58ch;
 }
 
 .case-study-summary {
@@ -436,6 +594,7 @@ h3 {
 
   .hero,
   .project-grid,
+  .case-study-visual,
   .case-study-summary,
   .split-section .about-layout,
   .site-footer {
@@ -446,6 +605,10 @@ h3 {
   .hero-copy,
   .case-study-hero {
     padding: 2rem;
+  }
+
+  .mock-phone {
+    min-height: 22rem;
   }
 }
 
